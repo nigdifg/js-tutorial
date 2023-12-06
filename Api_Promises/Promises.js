@@ -65,26 +65,36 @@
 
 // -------------------------------------------------------------------------------------------------------
 
-const promiseFive = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        let error = true
-        if(!error){
-            resolve({username:"Anurag_Js",password:"123"})
-        }
-        else{
-            reject('ERORR: Something went wrong')
-        }
-    },1000) 
-});
+// const promiseFive = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error = true
+//         if(!error){
+//             resolve({username:"Anurag_Js",password:"123"})
+//         }
+//         else{
+//             reject('ERORR: Something went wrong')
+//         }
+//     },1000) 
+// });
 
-async function consumePromisFive(){
+// async function consumePromisFive(){
 
-    try {
-        const response = await promiseFive
-        console.log(response);
-    } catch (error) {
-        console.log(error);
-    }
-}
-consumePromisFive()
+//     try {
+//         const response = await promiseFive
+//         console.log(response);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// consumePromisFive()
 
+fetch('https://api.github.com/users/nigdifg')
+.then((response)=>{
+    return response.json()
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=>{
+    console.log(error);
+})

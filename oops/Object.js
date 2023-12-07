@@ -11,6 +11,7 @@ function createUser(username,score){
     this.username = username
     this.score = score
 }
+
 createUser.prototype.increment = function(){
     this.score++;
 }
@@ -23,6 +24,7 @@ const tea = new createUser("tea",250)
 
 chai.printMe()
 tea.printMe()
+
 
 /*
 

@@ -43,8 +43,7 @@ User1.prototype.changeusername = function(){
     return `${this.username.toUpperCase()}`
 }
 
+const banda = new User1("Naya Banda", "tea@gmail.com", "123")
 
-const tea = new User1("tea", "tea@gmail.com", "123")
-
-console.log(tea.encryptpasswd());
-console.log(tea.changeusername());
+console.log(banda.encryptpasswd());
+console.log(banda.changeusername());
